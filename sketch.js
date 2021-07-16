@@ -32,9 +32,9 @@ function preload(){
   
   bgImg = loadImage("images/bg.png");
 
-  jumpSound = loadSound("sounds/jump.mp3")
-  dieSound = loadSound("sounds/die.mp3")
-  checkPointSound = loadSound("sounds/checkPoint.mp3")
+  jumpSound = loadSound("jump.mp3")
+  dieSound = loadSound("die.mp3")
+  checkPointSound = loadSound("checkPoint.mp3")
 }
 
 function setup() {
