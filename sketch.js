@@ -99,7 +99,7 @@ function draw() {
     score = score + Math.round(getFrameRate()/30);
     //score = Math.round(frameCount/60);
     //console.log(score);
-    console.log(getFrameRate());
+    //console.log(getFrameRate());
     
     if(score>0 && score%100 === 0){
        checkPointSound.play() 
