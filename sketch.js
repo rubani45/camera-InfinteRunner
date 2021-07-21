@@ -32,9 +32,9 @@ function preload(){
   
   bgImg = loadImage("images/bg.png");
 
-  jumpSound = loadSound("jump.mp3")
-  dieSound = loadSound("die.mp3")
-  checkPointSound = loadSound("checkPoint.mp3")
+  jumpSound = loadSound("sounds/jump.mp3")
+  dieSound = loadSound("sounds/die.mp3")
+  checkPointSound = loadSound("sounds/checkPoint.mp3")
 }
 
 function setup() {
@@ -196,7 +196,7 @@ function reset(){
 }
 
 function spawnObstacles(){
- if (frameRate % 60 === 0){
+ if (camera.position.x % 150 === 0){
    var obstacle = createSprite(camera.position.x + 950,165,10,40);
    obstacle.velocityX = -(6 + score/100);
    
@@ -229,7 +229,7 @@ function spawnObstacles(){
 
 function spawnClouds() {
   //write code here to spawn the clouds
-  if (frameRate % 60 === 0) {
+  if (getFrameRate % 150 === 0) {
     var cloud = createSprite(camera.position.x + 950,120,40,10);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
