@@ -229,7 +229,7 @@ function spawnObstacles(){
 
 function spawnClouds() {
   //write code here to spawn the clouds
-  if (getFrameRate % 150 === 0) {
+  if (frameRate % 150 === 0) {
     var cloud = createSprite(camera.position.x + 950,120,40,10);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
